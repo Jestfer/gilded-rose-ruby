@@ -9,33 +9,18 @@ class GildedRose
   def update_quality()
     @items.each do |item|
       if !is_brie?(item) && !is_backstage_passes?(item)
-        if item.quality > 0
-          reduce_quality(item)
-        end
+        reduce_quality(item) if item.quality > 0
       else
         if item.quality < 50
           item.quality = item.quality + 1
-          if is_backstage_passes?(item)
-            increase_quality(item)
-          end
+          
+          increase_quality(item) if is_backstage_passes?(item)
         end
       end
 
       reduce_sell_in(item)
 
-      if item.sell_in < 0
-        if !is_brie?(item)
-          if !is_backstage_passes?(item)
-            if item.quality > 0
-              reduce_quality(item)
-            end
-          else
-            bin_passes(item)
-          end
-        else
-          increase_quality(item)
-        end
-      end
+      sell_in_zero(item)
     end
   end
 end
@@ -69,4 +54,18 @@ end
 
 def is_brie?(item)
   item.name == "Aged Brie"
+end
+
+def sell_in_zero(item)
+  if item.sell_in < 0
+    if !is_brie?(item)
+      if !is_backstage_passes?(item)
+        reduce_quality(item) if item.quality > 0
+      else
+        bin_passes(item)
+      end
+    else
+      increase_quality(item)
+    end
+  end
 end
