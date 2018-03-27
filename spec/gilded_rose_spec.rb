@@ -12,6 +12,12 @@ describe GildedRose do
     it "degrades avg item qty by 1 when 1 day passes" do
       items = [Item.new("chicken", 10, 10)]
       GildedRose.new(items).update_quality()
+      expect(items[0].quality).to eq 9
+    end
+
+    it "reduces avg item sell_in by 1 when 1 day passes" do
+      items = [Item.new("chicken", 10, 10)]
+      GildedRose.new(items).update_quality()
       expect(items[0].sell_in).to eq 9
     end
 
