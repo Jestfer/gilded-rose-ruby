@@ -37,12 +37,10 @@ class GildedRose
               reduce_quality(item)
             end
           else
-            item.quality = item.quality - item.quality
+            bin_passes(item)
           end
         else
-          if item.quality < 50
-            item.quality = item.quality + 1
-          end
+          increase_brie_quality(item)
         end
       end
     end
@@ -57,4 +55,12 @@ end
 
 def reduce_sell_in(item)
   item.sell_in -= 1 if item.name != "Sulfuras, Hand of Ragnaros"
+end
+
+def increase_brie_quality(item)
+  item.quality += 1 if item.quality < 50
+end
+
+def bin_passes(item)
+  item.quality = 0
 end
