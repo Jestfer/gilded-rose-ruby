@@ -16,16 +16,7 @@ class GildedRose
         if item.quality < 50
           item.quality = item.quality + 1
           if is_backstage_passes?(item)
-            if item.sell_in < 11
-              if item.quality < 50
-                item.quality = item.quality + 1
-              end
-            end
-            if item.sell_in < 6
-              if item.quality < 50
-                item.quality = item.quality + 1
-              end
-            end
+            increase_quality(item)
           end
         end
       end
@@ -42,7 +33,7 @@ class GildedRose
             bin_passes(item)
           end
         else
-          increase_brie_quality(item)
+          increase_quality(item)
         end
       end
     end
@@ -59,7 +50,12 @@ def reduce_sell_in(item)
   item.sell_in -= 1 if item.name != "Sulfuras, Hand of Ragnaros"
 end
 
-def increase_brie_quality(item)
+def increase_quality(item)
+  if is_backstage_passes?(item)
+    return item.quality += 2 if item.sell_in < 6
+    return item.quality += 1 if item.sell_in < 11
+  end
+
   item.quality += 1 if item.quality < 50
 end
 
