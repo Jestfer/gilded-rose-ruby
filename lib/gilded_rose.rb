@@ -12,7 +12,7 @@ class GildedRose
   def update_quality()
     @items.each do |item|
       if !is_brie?(item) && !is_backstage_passes?(item)
-        reduce_quality(item) if item.quality > 0
+        reduce_quality(item)
       else
         increase_quality(item)
       end
@@ -27,7 +27,7 @@ end
 private
 
 def reduce_quality(item)
-  item.quality -= 1 if item.name != "Sulfuras, Hand of Ragnaros"
+  item.quality -= 1 if (item.name != "Sulfuras, Hand of Ragnaros" && item.quality > 0)
 end
 
 def reduce_sell_in(item)
