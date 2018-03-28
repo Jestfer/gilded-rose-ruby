@@ -60,15 +60,15 @@ def is_sulfuras?(item)
 end
 
 def sell_in_zero(item)
-  if item.sell_in < 0
-    if !is_brie?(item)
-      if !is_backstage_passes?(item)
-        reduce_quality(item) if item.quality > 0
-      else
-        bin_passes(item)
-      end
-    else
-      increase_quality(item)
-    end
+  set_deadline_qty(item) if item.sell_in < 0
+end
+
+def set_deadline_qty(item)
+  if !is_brie?(item)
+    bin_passes(item) if is_backstage_passes?(item)
+
+    reduce_quality(item)
+  else
+    increase_quality(item)
   end
 end
