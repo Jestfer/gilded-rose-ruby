@@ -7,7 +7,7 @@ class LegendaryItem < Item
     @quality = quality
   end
 
-  # def update_item
-  #   self
-  # end
+  def update_item
+    self
+  end
 end
