@@ -27,11 +27,11 @@ end
 private
 
 def reduce_quality(item)
-  item.quality -= 1 if (item.name != "Sulfuras, Hand of Ragnaros" && item.quality > 0)
+  item.quality -= 1 if (!item.instance_of?(LegendaryItem) && item.quality > 0)
 end
 
 def reduce_sell_in(item)
-  item.sell_in -= 1 if item.name != "Sulfuras, Hand of Ragnaros"
+  item.sell_in -= 1 if !item.instance_of? LegendaryItem
 end
 
 def increase_quality(item)
@@ -48,11 +48,11 @@ def bin_passes(item)
 end
 
 def is_backstage_passes?(item)
-  item.name == "Backstage passes to a TAFKAL80ETC concert"
+  item.instance_of? DeadlineItem
 end
 
 def is_brie?(item)
-  item.name == "Aged Brie"
+  item.instance_of? AgedItem
 end
 
 def sell_in_zero(item)
