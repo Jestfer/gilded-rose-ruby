@@ -1,4 +1,4 @@
-class DeadlineItem < Item
+class DeadlineItem < CommonItem
   NAME = 'Backstage passes to a TAFKAL80ETC concert'
 
   def initialize(name = NAME, sell_in, quality)
