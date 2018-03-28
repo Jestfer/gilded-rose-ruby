@@ -27,11 +27,11 @@ end
 private
 
 def reduce_quality(item)
-  item.quality -= 1 if (!item.instance_of?(LegendaryItem) && item.quality > 0)
+  item.quality -= 1 if (!is_sulfuras?(item) && item.quality > 0)
 end
 
 def reduce_sell_in(item)
-  item.sell_in -= 1 if !item.instance_of? LegendaryItem
+  item.sell_in -= 1 if !is_sulfuras?(item)
 end
 
 def increase_quality(item)
@@ -53,6 +53,10 @@ end
 
 def is_brie?(item)
   item.instance_of? AgedItem
+end
+
+def is_sulfuras?(item)
+  item.instance_of? LegendaryItem
 end
 
 def sell_in_zero(item)
