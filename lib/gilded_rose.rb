@@ -1,4 +1,7 @@
 require 'item'
+require 'legendary_item'
+require 'aged_item'
+require 'deadline_item'
 
 class GildedRose
 
