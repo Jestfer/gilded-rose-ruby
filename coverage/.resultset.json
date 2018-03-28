@@ -97,10 +97,6 @@
         6,
         null,
         5,
-        4,
-        null,
-        4,
-        null,
         null,
         null,
         11,
@@ -121,12 +117,12 @@
         null,
         null,
         1,
+        5,
         3,
-        3,
         1,
         null,
         null,
-        0,
+        2,
         null,
         null,
         1,
@@ -134,7 +130,7 @@
         null,
         null,
         1,
-        20,
+        18,
         null,
         null,
         1,
@@ -204,6 +200,6 @@
         null
       ]
     },
-    "timestamp": 1522237562
+    "timestamp": 1522243267
   }
 }

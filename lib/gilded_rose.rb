@@ -14,11 +14,7 @@ class GildedRose
       if !is_brie?(item) && !is_backstage_passes?(item)
         reduce_quality(item) if item.quality > 0
       else
-        if item.quality < 50
-          item.quality = item.quality + 1
-          
-          increase_quality(item) if is_backstage_passes?(item)
-        end
+        increase_quality(item)
       end
 
       reduce_sell_in(item)
@@ -40,8 +36,8 @@ end
 
 def increase_quality(item)
   if is_backstage_passes?(item)
-    return item.quality += 2 if item.sell_in < 6
-    return item.quality += 1 if item.sell_in < 11
+    return item.quality += 3 if item.sell_in < 6
+    return item.quality += 2 if item.sell_in < 11
   end
 
   item.quality += 1 if item.quality < 50
