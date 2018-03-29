@@ -8,6 +8,13 @@ class AgedItem < CommonItem
   end
 
   def update_item
-
+    next_day
+    increase_quality
   end
+end
+
+private
+
+def increase_quality
+  @quality += 1 if @quality < MAX_QTY
 end
