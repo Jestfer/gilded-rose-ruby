@@ -11,10 +11,11 @@ class AgedItem < CommonItem
     next_day
     increase_quality
   end
+  
+  private
+  
+  def increase_quality
+    @quality += 1 if @quality < MAX_QTY
+  end
 end
 
-private
-
-def increase_quality
-  @quality += 1 if @quality < MAX_QTY
-end

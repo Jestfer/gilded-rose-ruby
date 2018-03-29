@@ -9,22 +9,22 @@ class DeadlineItem < CommonItem
 
   def update_item
     next_day
-    increase_qty
+    increase_quality
     check_expiracy
   end
-end
 
-private
-
-def check_expiracy
-  bin_passes if @sell_in < 0
-end
-
-def bin_passes
-  @quality = MIN_QTY
-end
-
-def increase_qty
-  return @quality += 3 if @sell_in < 5
-  @quality += 2 if @sell_in < 10
+  private
+  
+  def check_expiracy
+    bin_passes if @sell_in < 0
+  end
+  
+  def bin_passes
+    @quality = MIN_QTY
+  end
+  
+  def increase_quality
+    return @quality += 3 if @sell_in < 5
+    @quality += 2 if @sell_in < 10
+  end
 end
