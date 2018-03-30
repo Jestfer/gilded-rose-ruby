@@ -1,4 +1,4 @@
-class LegendaryItem < Item
+class LegendaryItem < CommonItem
   NAME = 'Sulfuras, Hand of Ragnaros'
 
   def initialize(name = NAME, sell_in, quality)

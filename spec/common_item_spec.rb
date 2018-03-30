@@ -12,7 +12,9 @@ describe CommonItem do
 
       expect(chicken.sell_in).to eq 9
     end
+  end
 
+  describe "#update_item" do
     it "degrades item quality by 1 when item is updated" do
       chicken.update_item
 
