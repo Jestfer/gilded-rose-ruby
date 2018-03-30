@@ -230,7 +230,24 @@
         null,
         1,
         null,
+        2,
+        2,
+        2,
+        2,
+        null,
+        2,
+        null,
+        2,
+        null,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
         null,
         null
       ],
@@ -244,12 +261,12 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        4,
         null,
         null,
         null
@@ -271,13 +288,11 @@
       ],
       "/Users/josu/Documents/MakersAcademy/Projects/Course/Week-10/gilded_rose_tech_test/gilded_rose_ruby/spec/item_spec.rb": [
         1,
-        null,
         1,
         1,
         1,
         null,
         1,
-        null,
         null,
         null,
         null
@@ -306,6 +321,6 @@
         null
       ]
     },
-    "timestamp": 1522403904
+    "timestamp": 1522410306
   }
 }
