@@ -10,7 +10,7 @@ describe GildedRose do
 
   let(:items) { [common_item, aged_item, legendary_item, deadline_item] }
 
-  subject(:gilded_rose) { described_class.new(items)}
+  subject(:gilded_rose) { described_class.new(items) }
 
   describe "#update_quality" do
     it "receives array of different items to iterate through them and update them" do

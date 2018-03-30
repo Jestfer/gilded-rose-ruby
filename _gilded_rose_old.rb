@@ -10,9 +10,9 @@ class GildedRose
     @items = items
   end
 
-  def update_quality()
+  def update_quality
     @items.each do |item|
-      if !is_brie?(item) && !is_backstage_passes?(item)
+      if !brie?(item) && !backstage_passes?(item)
         reduce_quality(item)
       else
         increase_quality(item)
@@ -28,15 +28,15 @@ end
 private
 
 def reduce_quality(item)
-  item.quality -= 1 if (!is_sulfuras?(item) && item.quality > 0)
+  item.quality -= 1 if (!sulfuras?(item) && item.quality > 0)
 end
 
 def reduce_sell_in(item)
-  item.sell_in -= 1 if !is_sulfuras?(item)
+  item.sell_in -= 1 if !sulfuras?(item)
 end
 
 def increase_quality(item)
-  if is_backstage_passes?(item)
+  if backstage_passes?(item)
     return item.quality += 3 if item.sell_in < 6
     return item.quality += 2 if item.sell_in < 11
   end
@@ -48,25 +48,25 @@ def bin_passes(item)
   item.quality = 0
 end
 
-def is_backstage_passes?(item)
+def backstage_passes?(item)
   item.instance_of? DeadlineItem
 end
 
-def is_brie?(item)
+def brie?(item)
   item.instance_of? AgedItem
 end
 
-def is_sulfuras?(item)
+def sulfuras?(item)
   item.instance_of? LegendaryItem
 end
 
 def sell_in_zero(item)
-  set_deadline_qty(item) if item.sell_in < 0
+  deadline_quality(item) if item.sell_in < 0
 end
 
-def set_deadline_qty(item)
-  if !is_brie?(item)
-    bin_passes(item) if is_backstage_passes?(item)
+def deadline_quality(item)
+  if !brie?(item)
+    bin_passes(item) if backstage_passes?(item)
 
     reduce_quality(item)
   else

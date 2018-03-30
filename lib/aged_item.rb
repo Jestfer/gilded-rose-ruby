@@ -20,4 +20,3 @@ class AgedItem < CommonItem
     @quality += 1 if @quality < MAX_QTY
   end
 end
-

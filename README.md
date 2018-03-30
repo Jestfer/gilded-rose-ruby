@@ -2,7 +2,7 @@ Gilded Roses
 =================
 
 ## Description
-* Gilded Roses Tech Test
+Gilded Roses Tech Test
 
 ## User Stories
 ```
