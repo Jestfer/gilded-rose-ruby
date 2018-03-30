@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-30T13:12:45+01:00">2018-03-30T13:12:45+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-30T13:18:14+01:00">2018-03-30T13:18:14+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>14</b> files in total.
-    <b>185</b> relevant lines. 
-    <span class="green"><b>185</b> lines covered</span> and
+    <b>187</b> relevant lines. 
+    <span class="green"><b>187</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -163,9 +163,9 @@
       <tr>
         <td class="strong"><a href="#9ba5b17c932ed10b680e9379f8d6ba8e67e9c6d2" class="src_link" title="spec/gilded_rose_spec.rb">spec/gilded_rose_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>15</td>
-        <td>15</td>
+        <td>26</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
         <td>1.4</td>
       </tr>
@@ -1768,7 +1768,7 @@
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
@@ -2088,8 +2088,8 @@
     <h3>spec/gilded_rose_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2145,97 +2145,109 @@
           <code class="ruby">  let(:deadline_item) { double(&#39;a deadline item&#39;, name: &#39;KISS Backstage Passes&#39;, sell_in: 0, quality: 0) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:conjured_item) { double(&#39;a conjured item&#39;, name: &#39;Large Mana Potion&#39;, sell_in: 10, quality: 10) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
+        <li class="covered" data-hits="2" data-linenumber="11">
           <span class="hits">2</span>
           
           <code class="ruby">  let(:items) { [common_item, aged_item, legendary_item, deadline_item] }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
+        <li class="covered" data-hits="2" data-linenumber="13">
           <span class="hits">2</span>
           
           <code class="ruby">  subject(:gilded_rose) { described_class.new(items)}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &quot;#update_quality&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;receives array of different items to iterate through them and update them&quot; do</code>
+          <code class="ruby">  describe &quot;#update_quality&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">      allow(common_item).to receive(:update_item)</code>
+          <code class="ruby">    it &quot;receives array of different items to iterate through them and update them&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">      allow(aged_item).to receive(:update_item)</code>
+          <code class="ruby">      allow(common_item).to receive(:update_item)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">      allow(legendary_item).to receive(:update_item)</code>
+          <code class="ruby">      allow(aged_item).to receive(:update_item)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">      allow(deadline_item).to receive(:update_item)</code>
+          <code class="ruby">      allow(legendary_item).to receive(:update_item)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      allow(deadline_item).to receive(:update_item)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">      gilded_rose.update_quality</code>
+          <code class="ruby">      allow(conjured_item).to receive(:update_item)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      gilded_rose.update_quality</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
