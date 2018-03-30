@@ -1,3 +1,5 @@
+require 'item'
+
 MIN_QTY = 0
 MAX_QTY = 50
 
