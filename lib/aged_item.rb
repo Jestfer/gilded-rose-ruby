@@ -1,3 +1,5 @@
+require 'common_item'
+
 class AgedItem < CommonItem
   NAME = 'Aged Brie'
 
