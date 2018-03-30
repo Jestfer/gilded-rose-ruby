@@ -1,7 +1,7 @@
-# require 'gilded_rose'
+require 'gilded_rose'
 
-# describe GildedRose do
+describe GildedRose do
 
-#   describe "#update_quality" do
-#   end
-# end
+  describe "#update_quality" do
+  end
+end
