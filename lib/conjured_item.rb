@@ -3,7 +3,6 @@ class ConjuredItem < CommonItem
     next_day
     expiracy_check
 
-    reduce_quality
-    reduce_quality
+    reduce_quality(2)
   end
 end

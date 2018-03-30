@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-30T13:18:14+01:00">2018-03-30T13:18:14+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-30T13:28:59+01:00">2018-03-30T13:28:59+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.69
+         1.65
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>14</b> files in total.
-    <b>187</b> relevant lines. 
-    <span class="green"><b>187</b> lines covered</span> and
+    <b>186</b> relevant lines. 
+    <span class="green"><b>186</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -67,17 +67,17 @@
         <td>16</td>
         <td>16</td>
         <td>0</td>
-        <td>3.5</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#29e0bb7b1818833ce6787ffe77ac3eefd88396c4" class="src_link" title="lib/conjured_item.rb">lib/conjured_item.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>9</td>
-        <td>6</td>
-        <td>6</td>
+        <td>8</td>
+        <td>5</td>
+        <td>5</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -509,8 +509,8 @@
           <code class="ruby">  def expiracy_check</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="23">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="9" data-linenumber="23">
+          <span class="hits">9</span>
           
           <code class="ruby">    true if @sell_in &lt; 0</code>
         </li>
@@ -530,11 +530,11 @@
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">  def reduce_quality</code>
+          <code class="ruby">  def reduce_quality(times = 1)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="27">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="5" data-linenumber="27">
+          <span class="hits">5</span>
           
           <code class="ruby">    return nil if @quality == MIN_QTY</code>
         </li>
@@ -545,10 +545,10 @@
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="29">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="4" data-linenumber="29">
+          <span class="hits">4</span>
           
-          <code class="ruby">    expiracy_check == true ? @quality -= 2 : @quality -= 1</code>
+          <code class="ruby">    expiracy_check == true ? @quality -= 2 * times : @quality -= 1 * times</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
@@ -573,8 +573,8 @@
     <h3>lib/conjured_item.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -615,22 +615,16 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">    reduce_quality</code>
+          <code class="ruby">    reduce_quality(2)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    reduce_quality</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>
